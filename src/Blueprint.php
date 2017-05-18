@@ -242,9 +242,9 @@ class Blueprint
             $type = $this->resolveType($attribute->type);
 
             $contents .= sprintf(
-                ' (%s, %s, fixed) - %s',
+                ' (%s, %s) - %s',
                 $arrayType ? "array[${type}]" : $type,
-                $attribute->required ? 'required' : 'optional',
+                $arrayType ? ($attribute->required ? 'required, fixed' : 'optional') : ($attribute->required ? 'required' : 'optional'),
                 $attribute->description
             );
         });

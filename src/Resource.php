@@ -95,7 +95,7 @@ class Resource extends Section
             $definition = $method.' '.$definition;
         }
 
-        return '# '.$this->getIdentifier().($definition == '/' ? '' : ' ['.$definition.']');
+        return '# Group '.$this->getIdentifier().($definition == '/' ? '' : ' ['.$definition.']');
     }
 
     /**

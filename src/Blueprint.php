@@ -142,7 +142,9 @@ class Blueprint
             if ($resource->getActions()->isEmpty()) {
                 return;
             }
+            $contents .= $resource->getGroupName();
 
+            $contents .= $this->line(2);
             $contents .= $resource->getDefinition();
 
             if ($description = $resource->getDescription()) {

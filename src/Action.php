@@ -60,7 +60,7 @@ class Action extends Section
             $definition = $identifier.' ['.$definition.']';
         }
 
-        return '## '.$definition;
+        return '### '.$definition;
     }
 
     /**

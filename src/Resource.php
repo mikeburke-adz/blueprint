@@ -83,6 +83,16 @@ class Resource extends Section
     }
 
     /**
+     * Get the resource group name.
+     *
+     * @return string
+     */
+    public function getGroupName()
+    {
+        return '# Group '.$this->getIdentifier();
+    }
+
+    /**
      * Get the resource definition.
      *
      * @return string
@@ -95,7 +105,7 @@ class Resource extends Section
             $definition = $method.' '.$definition;
         }
 
-        return '# Group '.$this->getIdentifier().($definition == '/' ? '' : ' ['.$definition.']');
+        return '# '.$this->getIdentifier().($definition == '/' ? '' : ' ['.$definition.']');
     }
 
     /**
